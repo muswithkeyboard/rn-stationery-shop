@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/navigation';
+import LoginScreen from '../screens/LoginScreen';
 import DrugListScreen from '../screens/DrugListScreen';
 import DrugDetailsScreen from '../screens/DrugDetailsScreen';
 import OrderScreen from '../screens/OrderScreen';
@@ -18,6 +19,11 @@ export default function RootNavigator() {
           contentStyle: { backgroundColor: '#f4f7fb' },
         }}
       >
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="DrugList"
           component={DrugListScreen}
